@@ -20,6 +20,7 @@ public class MainActivity extends FragmentActivity {
         setContentView(R.layout.activity_main);
 
         ViewPager vp = (ViewPager) findViewById(R.id.vp_main);
+        vp.setOffscreenPageLimit(1);
         vp.setAdapter(new MyPagerAdapter(getSupportFragmentManager()));
 
     }
