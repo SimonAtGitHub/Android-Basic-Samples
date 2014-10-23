@@ -13,7 +13,6 @@ import wandering.jp.viewpagerexample.fragment.AFragment;
 public class MainActivity extends FragmentActivity {
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +27,7 @@ public class MainActivity extends FragmentActivity {
     private void addAFragment(){
         Fragment fragment = new AFragment();
         android.support.v4.app.FragmentManager manager = getSupportFragmentManager();
-        manager.beginTransaction().add(android.R.id.content, fragment, AFragment.class.getName()).commit();
+        manager.beginTransaction().addToBackStack(AFragment.class.getName()).add(android.R.id.content, fragment, AFragment.class.getName()).commit();
     }
 
     @Override
